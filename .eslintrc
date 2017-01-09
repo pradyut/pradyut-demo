@@ -1,0 +1,62 @@
+{
+  "parser":"babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "extends": [
+    "defaults/rules/eslint/best-practices/google",
+    "defaults/rules/eslint/errors/google",
+    "defaults/rules/eslint/es6/google",
+    "defaults/rules/eslint/node/google",
+    "defaults/rules/eslint/strict/google",
+    "defaults/rules/eslint/style/google",
+    "defaults/rules/eslint/variables/google"
+  ],
+  "ecmaFeatures": {
+    "jsx": true,
+    "modules": true
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "rules": {
+    "no-unreachable": 2,                    // 0 = ignore, 1 = warn, 2 = error
+    "no-mixed-spaces-and-tabs": 2,
+    "max-len": [2, 120],
+    "dot-location": [2, "property"],
+    "no-invalid-this": 0,
+    "no-extra-parens": 0,
+    "no-var": 2,
+    "camelcase": [2, {properties: "never"}],
+    "no-irregular-whitespace": 2,
+    "no-loop-func": 2,
+    "no-trailing-spaces": 2,
+    "no-unneeded-ternary": 2,
+    "no-unused-vars": [2, {"varsIgnorePattern": "React"}],
+    "indent": [2, 2, {"SwitchCase": 1}],
+    "one-var": [2, { "initialized": "never"}],
+    "no-console": 2,
+    "import/namespace": 2
+  },
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "globals": {
+    "jest": false,                          // true means allow the global variable to be overwritten, false means disallow overwriting
+    "it": false,
+    "describe": false,
+    "beforeEach": false,
+    "afterEach": false,
+    "beforeAll": false,
+    "afterAll": false,
+    "expect": false,
+    "jasmine": false,
+    "spyOn": false,
+    "xit": false,
+    "xdescribe": false
+  }
+}
