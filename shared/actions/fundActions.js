@@ -1,10 +1,11 @@
 import * as FundsActionTypes from '../actiontypes/fundsActionTypes';
 let nextTodoId = 5;
+
 export const addFund = (name,holdings) => {
   return {
     type: FundsActionTypes.ADD_FUND,
     name,
-    id:nextTodoId++,
+    id: nextTodoId++,
     holdings
   };
 };

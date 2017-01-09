@@ -1,101 +1,101 @@
 import * as FundActionTypes from '../actiontypes/fundsActionTypes.js';
 
 const initialState = [
-    {
-      name: 'California Pension Fund',
-      id: 1,
-      holdings: [
-        {
-          name: 'Apple Computer',
-          ticker: 'AAPL',
-          price: '120',
-          units: '200'
-        },
-        {
-          name: 'Alphabet',
-          ticker: 'GOOG',
-          price: '600',
-          units: '300'
-        },
-        {
-          name: 'Facebook',
-          ticker: 'FB',
-          price: '220',
-          units: '100'
-        },
-      ]
-    },
-    {
-      name: 'Harvard Endowment',
-      id: 2,
-      holdings: [
-        {
-          name: 'LG',
-          ticker: 'LG',
-          price: '320',
-          units: '380'
-        },
-        {
-          name: 'Microsoft',
-          ticker: 'MSFT',
-          price: '200',
-          units: '840'
-        },
-        {
-          name: 'Sony',
-          ticker: 'SONY',
-          price: '20',
-          units: '890'
-        },
-      ]
-    },
-    {
-      name: 'Commodities Fund',
-      id: 3,
-      holdings: [
-        {
-          name: 'Gold',
-          ticker: 'GLD',
-          price: '90',
-          units: '1200'
-        },
-        {
-          name: 'Bitcoin',
-          ticker: 'XBT',
-          price: '900',
-          units: '1020'
-        },
-        {
-          name: 'Oil',
-          ticker: 'OIL',
-          price: '80',
-          units: '100'
-        },
-      ]
-    },
-    {
-      name: 'Crops Fund',
-      id: 4,
-      holdings: [
-        {
-          name: 'Corn',
-          ticker: 'CRN',
-          price: '30',
-          units: '480'
-        },
-        {
-          name: 'Rice',
-          ticker: 'RCE',
-          price: '100',
-          units: '410'
-        },
-        {
-          name: 'Water',
-          ticker: 'LIFE',
-          price: '220',
-          units: '48'
-        },
-      ]
+  {
+    name: 'California Pension Fund',
+    id: 1,
+    holdings: [
+      {
+        name: 'Apple Computer',
+        ticker: 'AAPL',
+        price: '120',
+        units: '200'
+      },
+      {
+        name: 'Alphabet',
+        ticker: 'GOOG',
+        price: '600',
+        units: '300'
+      },
+      {
+        name: 'Facebook',
+        ticker: 'FB',
+        price: '220',
+        units: '100'
+      },
+    ]
+  },
+  {
+    name: 'Harvard Endowment',
+    id: 2,
+    holdings: [
+      {
+        name: 'LG',
+        ticker: 'LG',
+        price: '320',
+        units: '380'
+      },
+      {
+        name: 'Microsoft',
+        ticker: 'MSFT',
+        price: '200',
+        units: '840'
+      },
+      {
+        name: 'Sony',
+        ticker: 'SONY',
+        price: '20',
+        units: '890'
+      },
+    ]
+  },
+  {
+    name: 'Commodities Fund',
+    id: 3,
+    holdings: [
+      {
+        name: 'Gold',
+        ticker: 'GLD',
+        price: '90',
+        units: '1200'
+      },
+      {
+        name: 'Bitcoin',
+        ticker: 'XBT',
+        price: '900',
+        units: '1020'
+      },
+      {
+        name: 'Oil',
+        ticker: 'OIL',
+        price: '80',
+        units: '100'
+      },
+    ]
+  },
+  {
+    name: 'Crops Fund',
+    id: 4,
+    holdings: [
+      {
+        name: 'Corn',
+        ticker: 'CRN',
+        price: '30',
+        units: '480'
+      },
+      {
+        name: 'Rice',
+        ticker: 'RCE',
+        price: '100',
+        units: '410'
+      },
+      {
+        name: 'Water',
+        ticker: 'LIFE',
+        price: '220',
+        units: '48'
+      },
+    ]
   }
 ];
 
@@ -121,10 +121,10 @@ export default function Funds(state = initialState, action) {
 
     case FundActionTypes.EDIT_FUND:
       let fundToFind = state.find(function(fund) {
-        //console.log(fund.id)
         return fund.id === parseInt(action.fundId);
       });
       let index = state.indexOf(fundToFind);
+
       return [
         ...state.slice(0, index),
         {

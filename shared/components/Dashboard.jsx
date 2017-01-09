@@ -1,6 +1,6 @@
 // Libs
 import React, {Component}           from 'react';
-import {bindActionCreators}       from 'redux';
+import {bindActionCreators}         from 'redux';
 import {Link}                       from 'react-router';
 
 import * as FundActions             from '../actions/fundActions';
