@@ -23,7 +23,9 @@ export default class FundCreate extends Component {
     this._goHome = this._goHome.bind(this);
   }
   componentWillReceiveProps(nextProps) {
-    this._goHome();
+    if(nextProps.funds != this.props.funds){
+      this._goHome();
+    }
   }
   _goHome() {
    browserHistory.push('/');
